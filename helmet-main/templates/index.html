@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Helmet AI</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+<button onclick="showPage('live')">Live</button>
+<button onclick="showPage('register')">Register</button>
+<button onclick="showPage('dashboard')">Dashboard</button>
+</nav>
+
+<!-- LIVE -->
+<div id="page-live" class="main-card">
+<video id="camera" autoplay playsinline></video>
+<button id="btn-start">Start</button>
+<button id="btn-stop">Stop</button>
+</div>
+
+<!-- REGISTER -->
+<div id="page-register" class="main-card" style="display:none">
+<h2>Register Face</h2>
+<input id="reg-name" placeholder="Name">
+<button onclick="registerFace()">Capture & Save</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="page-dashboard" class="main-card" style="display:none">
+<h2>Today Violations: <span id="count">0</span></h2>
+<div id="user-list"></div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
